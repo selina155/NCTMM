@@ -16,12 +16,12 @@ hypernet:
 
 # decoder options
 decoder:
-  _target_: src.modules.TCMMDecoder.SpatiotemporalGAT
+  _target_: src.modules.NCTMMDecoder.SpatiotemporalGAT
   embedding_dim: 64
 
 
 trainer:
-  _target_: src.model.TCMMTrainer.TCMMTrainer
+  _target_: src.model.NCTMMTrainer.NCTMMTrainer
   _partial_: true
   #shuffle: False
   batch_size: 64
